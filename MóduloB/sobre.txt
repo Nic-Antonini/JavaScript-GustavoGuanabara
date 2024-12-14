@@ -1,0 +1,1 @@
+Nesse módulo vimos: Váriaveis e seus tipos primitivos, tratamento de dados e operadores no js.

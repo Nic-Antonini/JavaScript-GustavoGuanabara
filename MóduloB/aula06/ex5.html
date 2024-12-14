@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando nùmeros</title>
+    <style>
+        *{
+            line-height: 25px;
+            font-size: 18px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 = 13.1
+        document.write('número com dois algarismos depois do ponto: ' + n1.toFixed(2) + '<br/>') //retorna 13.10
+        //toFixed() é um método que formata o número, adicionando a quantidade de algarismos que devem vir após a vírgula
+        
+        document.write('número com dois algarismos depois da vírgula: ' + n1.toFixed(2).replace('.',',')) //retorna 13,10
+        //replace() é um método que substitui o ponto flutuante para uma vírgula
+
+        document.write('</br> número em formato monetário brasileiro: ' + n1.toLocaleString('pt-BR', {
+            style: 'currency', 
+            currency: 'BRL'
+        }))
+
+    </script>
+</body>
+</html>

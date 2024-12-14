@@ -1,0 +1,3 @@
+Condições com JavaScript: Condições simples(if{}),
+Condições Compostas(if{} else{}), Condições Aninhadas(if{} else if{} else{})
+e Condições Múltiplas(switch).

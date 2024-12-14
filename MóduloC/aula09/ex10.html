@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM e selector</title>
+</head>
+<body>
+    <!--
+     Nesse exercício iremos selecionar elementos html com o querySelector/querySelectorAll que é
+     mais moderno e recomendando a se usar no javascript.
+     -->
+
+     <h1 class="title">
+        TÍTULO
+     </h1>
+     
+     <h2 id="subTitle">
+        SUBTÍTULO
+     </h2>
+
+     <script>
+
+      var title = window.document.querySelector('h1.title'); /*Aqui nós pegamos o elemento colocando na argumentação a tag dele
+      e a classe que é referenciada pelo "." que indica que é uma classe e o "title" que é o nome dessa classe. */
+
+      var subTitle = window.document.querySelector('h2#subTitle'); /*Aqui nós pegamos o elemento colocando na argumentação a tag dele
+      e o id que é referenciada pela "#" que indica que é um id e o "subTitle" que é o nome desse id. */
+
+      console.log(`Dentro do body do html está o: ${title.innerText} e o ${subTitle.innerText}`); //para aparecer no console
+      subTitle.style.color = '#608031'
+
+         /*
+         ANOTAÇÕES
+         Se quiser selecionar algum elemento pela classe, referencie pelo "."
+         Se quiser selecionar algum elemento pelo id, referencie pela '#'
+         Se quiser selecionar algum elemento pelo name, referencie da seguinte forma:
+            - querySelector(tagDoElemento[name="nameQueVoceDeu"]);
+         */
+
+     </script>
+
+</body>
+</html>

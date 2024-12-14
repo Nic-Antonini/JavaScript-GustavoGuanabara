@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com DOM</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .result{
+            color: #850000
+        }
+
+        #btn{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Usando valores que o usuário colocar e criando uma função a partir de um evento -->
+
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +  
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="submit" id="btn" value="SOMAR">
+    <script>
+
+        /*Variáveis que receberão os inputs*/
+        var tn1 = document.querySelector('input#txtn1');
+        var tn2 = document.querySelector('input#txtn2');
+        var btn = document.querySelector('input#btn');
+
+        /*Criando a função*/
+        btn.addEventListener('click', () => {
+
+            /*Variáveis que receberão os nùmeros digitados dos inputs*/
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+
+            if(n1 == 0 && n2 == 0){
+                alert('Coloque algum número');
+            } //Se o usuário não digitar nenhum número ou colocar 0 nos dois inputs, então retorna um alert
+            
+            else{
+                var result = document.createElement('h2'); // quando o evento ocorrer, criará um h2
+                result.className = 'result'; // esse h2 terá uma class com o nome 'result'
+                var sum = n1 + n2; //essa variável recebará os números e fará a soma
+                result.innerHTML = sum; // o h2 criado receberá o valor da soma
+                document.body.appendChild(result)//aqui o h2 é criado no body
+            }
+        })
+
+    </script>
+
+</body>
+</html>

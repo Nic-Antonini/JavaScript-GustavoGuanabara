@@ -1,0 +1,13 @@
+Clientes: A pessoa que está usando o sistema, que envia dados ou pede dados de um servidor (usuário).
+
+Servidor: A parte que cuida dos dados, envia para o banco de dados, pega dados do banco e envia para o lado do cliente (front).
+
+- JavaScript é uma linguagem Client Side: Por mais que essa linguagem sirva tanto para o back-end quanto front-end ele é focado e mais utilizado na parte do cliente, ou seja, no front-end.
+
+*Aprender React, Eléctron e Phaser mais tarde.
+
+        Armazenar dados do usuário em váriaveis e fazer operações com elas
+        No js, quando vermos o sinal de igual (=), ler ele com o verbo 'receber' 
+        Quando colocamos algum dado na variável, chamamos isso de 'atribuição' 
+        Os nomes que damos as variáveis são os identificadores, que pode começar com uma letra, $ ou _
+        e não pode começar com números nem ter espaços.

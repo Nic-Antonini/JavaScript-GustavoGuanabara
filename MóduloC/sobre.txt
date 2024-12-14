@@ -1,0 +1,1 @@
+Nesse módulo vimos: DOM (Document Object Model), como usar o DOM para selecionar elementos HTML e criar eventos com ele. 

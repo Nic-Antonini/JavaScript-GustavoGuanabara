@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM e getElementsByTagName</title>
+</head>
+
+    <style>
+        *{
+            background-color: rgb(26, 0, 36);
+            color: rgb(134, 223, 0);
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        p{
+            font-size: 32px;
+        }
+    </style>
+
+<body>
+    <!-- Document Object Model
+     Árvore DOM simples:
+        Window:
+        Document; Location; History ..... (vários objetos)
+        Document: (o que tem dentro de document)
+        Hmtl: (o que tem dentro de html)
+        head; body;
+    -->
+
+    <!-- usando o DOM para pegar elementos html -->
+
+    <p>OLÁ, ESSE É O TÍTULO</p>
+
+    <!-- Faremos com que o p acima seja repetido no body do html, para isso, precisamos abrir um script -->
+     <p>subtítulo</p>
+
+    <script>
+        const title = window.document.getElementsByTagName('p')[0]; //pegamos o conteúdo do título.
+        // O [0] representa qual elemento que eu estou pegando dentro do meu documento, no caso, seria o primeiro <p> que estivesse dentro do meu body.
+        // se houvesse um segundo <p> no meu body e eu quisesse pegá-lo, bastar vermos a posição que ele está (ele é o primeiro p no meu body? ele é o segundo?), então você colocaria a posição dele no array 
+
+
+            /*
+                COMO SABER QUANDO USAR O ARRAY [] PARA MARCAR A POSIÇÃO DO ELEMENTO? É SIMPLES:
+                Basta ver o método que você está usando do DOM. No caso acima, 'getElementsByTagName' está com "elements" no plural,
+                ou seja, temos vários elementos, por isso precisamos especificá-lo. O "getElementById", por exemplo,
+                é um método que não precisa especificar com a [], pois pelo próprio nome nós vemos que está no singular: 'Element'.
+            */
+
+        //a variável p, que foi criada no argumento no meu for (laço de repetição) é um contador que controla a execução
+        //do código que está dentro do corpo do laço, ou seja, quando ele tem que começar, continuar e terminar.
+        for(let p = 0; p < 9; p++){
+
+            const titleRepeat = window.document.createElement('p');
+            titleRepeat.innerHTML = title.innerHTML;
+            document.body.appendChild(titleRepeat);
+
+        }
+
+    </script>
+</body>
+</html>

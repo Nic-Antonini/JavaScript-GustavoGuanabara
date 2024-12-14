@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com DOM</title>
+    <style>
+        #area{
+            background-color: lightgreen;
+            width: 200px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 13px;
+            border: 2px solid black;
+            font-size: 18px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+    Tipos de evento com o mouse:
+    mouseenter: quando o mouse entra em um determinado elemento;
+    mousemove: quando o mouse, além de entrar no elemento, fica passando por cima dele;
+    mousedown: quando o usuário da um click constante no botão do mouse;
+    mouseup: quando o usuário solta o botão do mouse;
+    click: quando o usuário clica (um click rápido, diferente do mousedown) o botão do mouse;
+    mouseout: quando o mouse sai de cima do elemento.
+
+    Existem vários outros eventos, para saber mais acesse o site MDN (mozila)
+    -->
+
+    <div id="area" onclick="clicar()" onmousedown="clickContinuo()">
+        Interaja Aqui
+    </div>
+
+    <script>
+
+        var area = document.querySelector('div#area');
+
+        // Maneira 1: Criando funções que serão chamadas no html 
+        function clicar() {
+            area.innerText = "obrigado :)"
+        };
+
+        function clickContinuo(){
+                area.innerText = 'Não tanto 🙄'
+        };
+
+        //Maneira 2: Usando os listeners do js para adicionar um evento em algum elemento html
+        area.addEventListener('mouseenter', () => {
+            area.innerText = 'Agora clique!'
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>coloque o país que você mora</h1>
+    <input type="text" id="txtp"> <input type="button" onclick="verificar()" value="verificar">
+    <div id="res"></div>
+
+    <script>
+        const paisesEuropa = [
+            "Alemanha", "França", "Reino Unido", "Itália", "Espanha", "Portugal", "Países Baixos", "Bélgica", "Suécia", "Noruega", 
+            "Finlândia", "Dinamarca", "Polônia", "Grécia", "Áustria", "Suíça", "Irlanda", "Checoslováquia", "Hungria", "Romênia", 
+            "Bulgária", "Croácia", "Eslovênia", "Estônia", "Letônia", "Lituânia", "Lituânia", "Islândia", "Luxemburgo", "Malta"
+        ];
+
+        const paisesAmerica = [
+            "Brasil", "Estados Unidos", "México", "Canadá", "Argentina", "Colômbia", "Chile", "Peru", "Venezuela", "Equador", 
+            "Bolívia", "Paraguai", "Uruguai", "Guatemala", "Cuba", "Honduras", "El Salvador", "Nicarágua", "Costa Rica", "Panamá",
+            "República Dominicana", "Jamaica", "Trinidad e Tobago", "Barbados", "Belize", "Saint Lucia", "Antígua e Barbuda"
+        ];
+
+        const paisesAsia = [
+            "China", "Índia", "Japão", "Indonésia", "Paquistão", "Bangladesh", "Rússia", "Coreia do Sul", "Arábia Saudita", "Turquia",
+            "Irã", "Tailândia", "Myanmar", "Coreia do Norte", "Iémen", "Malásia", "Uzbequistão", "Afeganistão", "Armenia", "Azerbaijão",
+            "Catar", "Kuwait", "Omã", "Emirados Árabes Unidos", "Israel", "Singapura", "Sri Lanka", "Nepal", "Mianmar", "Laos"
+        ];
+
+        function verificar(){
+            var txtp = document.querySelector('input#txtp');
+            var país = txtp.value.trim();
+            var res = document.querySelector('div#res');
+
+            if(paisesEuropa.includes(país)){
+                res.innerHTML += "Você é europeu."
+            } else if (paisesAmerica.includes(país)){
+                res.innerHTML += 'Você é americano.'
+            } else if (paisesAsia.includes(país)){
+                res.innerHTML += 'Você é asiático.'
+            } else {
+                res.innerHTML += 'País não encontrado.'
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
